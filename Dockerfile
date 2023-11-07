@@ -11,14 +11,18 @@ WORKDIR /src
 # Install runpod
 RUN pip install runpod
 
-COPY * .
-
-# Instal dependencies
-RUN pip install -r requirements.txt
-
+# Download SDXL model for training
 RUN mkdir /src/sdxl-cache
 RUN wget https://weights.replicate.delivery/default/sdxl/sdxl-vae-fix-1.0.tar
 RUN tar -xvf sdxl-vae-fix-1.0.tar -C /src/sdxl-cache
+
+
+# Instal python dependencies
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Copy the training files
+COPY * .
 
 # Call your file when your container starts
 CMD [ "python", "-u", "/src/worker.py" ]
