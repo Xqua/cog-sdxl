@@ -13,7 +13,7 @@ RUN pip install runpod
 
 # Download SDXL model for training
 RUN mkdir /src/sdxl-cache
-RUN wget https://weights.replicate.delivery/default/sdxl/sdxl-vae-fix-1.0.tar & tar -xvf sdxl-vae-fix-1.0.tar -C /src/sdxl-cache
+RUN wget https://weights.replicate.delivery/default/sdxl/sdxl-vae-fix-1.0.tar && tar -xvf sdxl-vae-fix-1.0.tar -C /src/sdxl-cache
 
 # Instal python dependencies
 COPY requirements.txt .
