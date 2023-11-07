@@ -1,6 +1,8 @@
 # Include Python
 FROM runpod/pytorch:3.10-2.0.0-117
 
+RUN apt install libgl1-mesa-glx ffmpeg libsm6 libxext6
+
 # Define your working directory
 RUN mkdir /src
 WORKDIR /src

@@ -13,3 +13,5 @@ mediapipe==0.10.2
 openai
 python-dotenv
 prodigyopt
+google-cloud-storage
+google-auth
