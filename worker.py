@@ -126,7 +126,7 @@ def run(job):
         device = "cuda:0",
         lora_rank = validated_input["lora_rank"],
         is_lora = validated_input["is_lora"],
-        args_dict = validated_input["args_dict"],
+        args_dict = validated_input,
         debug = validated_input["debug"],
         hard_pivot = validated_input["hard_pivot"],
         off_ratio_power = validated_input["off_ratio_power"],
