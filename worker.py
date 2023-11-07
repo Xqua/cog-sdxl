@@ -3,6 +3,7 @@
 import json
 import os
 from pathlib import Path
+from random import random
 import shutil
 import tarfile
 
@@ -44,6 +45,9 @@ def run(job):
     if validated_input["mode"] == "object":
         validated_input["mode"] = "concept"
 
+    if not validated_input["seed"]:
+        validated_input["seed"] = int(random()*100000)
+        
     print("predict train_lora")
     print(validated_input)
 
