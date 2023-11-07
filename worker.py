@@ -143,7 +143,7 @@ def run(job):
             arcname = file_path.relative_to(directory)
             tar.add(file_path, arcname=arcname)
 
-    lora_url = BUCKET.upload_tar(out_path, f"/loras/{validated_input['name']/out_path}")
+    lora_url = BUCKET.upload_tar(out_path, f"/loras/{validated_input['name']}/out_path")
     grid_url = BUCKET.upload_tar(validation_grid_img_path, f"/loras/{validated_input['name']}/validation_grid.jpg")
 
     print("LORA training finished!")
