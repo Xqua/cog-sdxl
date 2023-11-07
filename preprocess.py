@@ -400,7 +400,7 @@ def blip_captioning_dataset(
         print(caption)
         captions.append(caption)
 
-    if len(captions)>3 and len(captions)<40 and (len(text) == 0):
+    if len(captions)>3 and len(captions)<1000 and (len(text) == 0):
         # use chatgpt to auto-find a good trigger text and insert it naturally into the prompts:
         retry_count = 0
         while retry_count < 4:
