@@ -19,11 +19,10 @@ class BucketConnector:
         blob = bucket.blob(bucket_url)
         blob.download_to_filename(local_path)
 
-    def upload_file(self, local_path, bucket_url, content_type):
+    def upload_file(self, local_path, bucket_url, content_type=None):
         bucket = self.client.bucket(self.data_bucket)
         blob = bucket.blob(bucket_url)
-        base64_content = base64.b64decode(local_path)
-        blob.upload_from_string(base64_content, content_type=content_type)
+        blob.upload_from_filename(local_path, content_type=content_type)
         blob.make_public()
         return blob.public_url
 
