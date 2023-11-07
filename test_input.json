@@ -1,0 +1,13 @@
+{
+    "input": {
+        
+        "name": "dadanyc",
+        "lora_training_urls": "https://storage.googleapis.com/a1111-output/DADA_Portraits_2023.zip",
+        "mode": "style",
+        "resolution": 1024, 
+        "max_train_steps": 3790, 
+        "checkpointing_steps": 758, 
+        "lora_rank": 8,
+        "run_name": "dadanyc01"
+    }
+}
