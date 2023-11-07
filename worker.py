@@ -11,14 +11,14 @@ from runpod.serverless.utils import rp_download, rp_upload, rp_cleanup
 from runpod.serverless.utils.rp_validator import validate
 from bucket_connector import BucketConnector
 
+from constants import SDXL_MODEL_CACHE
+
 from preprocess import preprocess
 from trainer_pti import main
 
 from rp_schema import INPUT_SCHEMA
 
 BUCKET = BucketConnector()
-
-SDXL_MODEL_CACHE = "/src/sdxl-cache"
 
 def run(job):
     '''

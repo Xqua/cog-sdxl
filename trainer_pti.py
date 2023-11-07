@@ -25,7 +25,7 @@ from dataset_and_utils import (
 
 from io_utils import make_validation_img_grid, download_and_prep_training_data
 
-from predict_old import SDXL_MODEL_CACHE
+from constants import SDXL_MODEL_CACHE
 from diffusers import StableDiffusionXLPipeline
 from safetensors.torch import load_file
 
