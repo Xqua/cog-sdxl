@@ -22,6 +22,7 @@ INPUT_SCHEMA = {
     'seed': {
         'type': int,
         'required': False,
+        'default': -1,
     },
     'resolution': {
         'type': int,

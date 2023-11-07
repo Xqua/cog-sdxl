@@ -45,9 +45,9 @@ def run(job):
     if validated_input["mode"] == "object":
         validated_input["mode"] = "concept"
 
-    if not validated_input["seed"]:
+    if validated_input["seed"] < 0:
         validated_input["seed"] = int(random()*100000)
-        
+
     print("predict train_lora")
     print(validated_input)
 
