@@ -16,8 +16,8 @@ INPUT_SCHEMA = {
     'checkpoint': {
         'type': str,
         'required': False,
-        'default': "object",
-        'constraints': lambda width: width in ["face", "style", "object"]
+        'default': "sdxl-v1.0",
+        'constraints': lambda width: width in ["sdxl-v1.0"]
     },
     'seed': {
         'type': int,
