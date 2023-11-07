@@ -20,6 +20,7 @@ class BucketConnector:
         blob.download_to_filename(local_path)
 
     def upload_file(self, local_path, bucket_url, content_type=None):
+        logging.info(f"Uploading file {local_path} to {bucket_url}...")
         bucket = self.client.bucket(self.data_bucket)
         blob = bucket.blob(bucket_url)
         blob.upload_from_filename(local_path, content_type=content_type)
